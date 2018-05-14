@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="PasswordHelperDB">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.8">
+    <root id="1">
+      <ServerVersion>9.5.4</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="TWI_DB">
+      <ObjectId>24582</ObjectId>
+    </database>
+    <database id="3" parent="1" name="phDB">
+      <ObjectId>24608</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <database id="4" parent="1" name="postgres">
+      <ObjectId>12373</ObjectId>
+      <Comment>default administrative connection database</Comment>
+    </database>
+    <database id="5" parent="1" name="reminderdb">
+      <ObjectId>24576</ObjectId>
+    </database>
+    <role id="6" parent="1" name="postgres">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <BypassRls>1</BypassRls>
+    </role>
+    <schema id="7" parent="3" name="information_schema">
+      <ObjectId>12081</ObjectId>
+    </schema>
+    <schema id="8" parent="3" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+      <Comment>system catalog schema</Comment>
+    </schema>
+    <schema id="9" parent="3" name="pg_temp_1">
+      <ObjectId>11816</ObjectId>
+    </schema>
+    <schema id="10" parent="3" name="pg_toast">
+      <ObjectId>99</ObjectId>
+      <Comment>reserved schema for TOAST tables</Comment>
+    </schema>
+    <schema id="11" parent="3" name="pg_toast_temp_1">
+      <ObjectId>11817</ObjectId>
+    </schema>
+    <schema id="12" parent="3" name="public">
+      <ObjectId>2200</ObjectId>
+      <Comment>standard public schema</Comment>
+      <IntrospectionTimestamp>2018-05-08.18:10:03.707</IntrospectionTimestamp>
+      <IntrospectionStateNumber>706</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <table id="13" parent="12" name="base_table">
+      <ObjectId>24852</ObjectId>
+      <StateNumber>705</StateNumber>
+    </table>
+    <table id="14" parent="12" name="users_table">
+      <ObjectId>24860</ObjectId>
+      <StateNumber>706</StateNumber>
+    </table>
+    <column id="15" parent="13" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>705</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="16" parent="13" name="login_user">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>705</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="17" parent="13" name="site">
+      <Position>3</Position>
+      <DataType>varchar(500)|0s</DataType>
+      <StateNumber>705</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="18" parent="13" name="site_login">
+      <Position>4</Position>
+      <DataType>varchar(500)|0s</DataType>
+      <StateNumber>705</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="19" parent="13" name="site_password">
+      <Position>5</Position>
+      <DataType>varchar(500)|0s</DataType>
+      <StateNumber>705</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="20" parent="13" name="base_table_pkey">
+      <ObjectId>24858</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="21" parent="13" name="base_table_pkey">
+      <ObjectId>24859</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>base_table_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="22" parent="14" name="id_user">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>706</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="23" parent="14" name="login">
+      <Position>2</Position>
+      <DataType>varchar(500)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>706</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="24" parent="14" name="password">
+      <Position>3</Position>
+      <DataType>varchar(500)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>706</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="25" parent="14" name="users_table_pkey">
+      <ObjectId>24866</ObjectId>
+      <ColNames>id_user</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="26" parent="14" name="users_table_pkey">
+      <ObjectId>24867</ObjectId>
+      <ColNames>id_user</ColNames>
+      <UnderlyingIndexName>users_table_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
