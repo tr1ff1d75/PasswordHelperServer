@@ -24,7 +24,7 @@ public class BaseServiceImpl implements BaseService {
 
     public BasePH save(BasePH userBase) {
       /*  BasePH tw=new BasePH();
-        tw.setLogin(log);
+        tw.setLogin(log);,
         tw.setSite(userBase.getSite());
         tw.setSiteLogin(userBase.getSitePass());
         tw.setSitePass(userBase.getSitePass());*/

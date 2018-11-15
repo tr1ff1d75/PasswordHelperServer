@@ -15,18 +15,13 @@ public class BaseController {
 
     @Autowired
     private BaseService service;
+
     @RequestMapping(value = "/getAll", method = RequestMethod.GET)
     @ResponseBody
     public List<BasePH> getAllBase() {
         return service.getAll();
     }
 
-/*    @RequestMapping(value = "/saveBase/{log}/{userBase}", method = RequestMethod.POST)
-    @ResponseBody
-    public BasePH saveBase(@PathVariable("log") String log, @PathVariable("userBase") BasePH userBase) {
-        return service.save(log,userBase);
-    }
-*/
     @RequestMapping(value = "/saveBase", method = RequestMethod.POST)
     @ResponseBody
     public BasePH saveBase(@RequestBody BasePH userBase) {
